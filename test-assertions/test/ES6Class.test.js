@@ -28,5 +28,13 @@ describe('Im checking my class functionality', () => {
     expect(es6Class.validEmail("mary@ooppinscom")).to.equal(false);
     expect(es6Class.validEmail("@ooppinscom")).to.equal(false);
   });
+  it('Validate our Name', () => {
+    const es6Class = new ES6Class();
+    expect(es6Class.validName("Viktorija Kuneviciute")).to.equal(true);
+    expect(es6Class.validName("Viktorija Marry Kuneviciute")).to.equal(true);
+    expect(es6Class.validName("")).to.equal(false);
+    expect(es6Class.validName("R2D2")).to.equal(false);
+    expect(es6Class.validName("@#$%%")).to.equal(false);
+
   });
 });

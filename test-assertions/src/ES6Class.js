@@ -15,5 +15,14 @@ export class ES6Class {
     }
     return false
   }
+  validName(firstLastName) {
+    if (
+      firstLastName !== "" &&
+      /[A-Za-z\s]{4,255}/.test(firstLastName)
+    ) {
+      return true
+    } else {
+      return false
+    }
   }
 }
