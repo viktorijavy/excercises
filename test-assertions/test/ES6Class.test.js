@@ -21,9 +21,12 @@ describe('Im checking my class functionality', () => {
     const es6Class = new ES6Class();
     expect(es6Class.otherMethod()).to.equal('yay');
   });
-  it('Validate our email', () => {
+  it('Validate our Email', () => {
     const es6Class = new ES6Class();
     expect(es6Class.validEmail("mary@poppins.com")).to.equal(true);
     expect(es6Class.validEmail("maroppins.com")).to.equal(false);
+    expect(es6Class.validEmail("mary@ooppinscom")).to.equal(false);
+    expect(es6Class.validEmail("@ooppinscom")).to.equal(false);
+  });
   });
 });

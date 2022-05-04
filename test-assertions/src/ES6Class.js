@@ -6,6 +6,14 @@ export class ES6Class {
     return 'whatever';
   }
   validEmail(email) {
-    return email.indexOf("@") !== -1
+    if (
+      email.indexOf("@") !== -1 &&
+      email.indexOf(".") !== -1 &&
+      email.indexOf('@') !== 0
+    ) {
+      return true
+    }
+    return false
+  }
   }
 }
