@@ -6,5 +6,4 @@ const isPalindrom = (word) => {
     return lowerCased === wordReversed ? 'palindrom' : 'not palindrom'
 
 }
-
-console.log(isPalindrom('Hannah'))
+export default isPalindrom;
